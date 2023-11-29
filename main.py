@@ -12,7 +12,7 @@ os.chdir(base_path)
 base_path = os.getcwd()
 resume = os.path.join(base_path,"AttachingFiles","resume.pdf")
 sender_email = "akhileshpra.shahi@gmail.com"
-sender_pass = "exhr fbet kaca bmax"
+sender_pass = "dsdy kjaw dbwc iqra"
 info = dict()
 
 
