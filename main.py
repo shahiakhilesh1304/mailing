@@ -11,8 +11,8 @@ base_path = os.path.dirname(__file__)
 os.chdir(base_path)
 base_path = os.getcwd()
 resume = os.path.join(base_path,"AttachingFiles","resume.pdf")
-sender_email = "akhileshpra.shahi@gmail.com"
-sender_pass = "dsdy kjaw dbwc iqra"
+sender_email = "************@gmail.com" #Your Email Id
+sender_pass = "***************" #Insert password if you have no 2FA enabled if you have enabled 2FA insert the app key after generating through security setting to 2FA section.
 info = dict()
 
 
@@ -44,8 +44,9 @@ def sendmail():
                 part.add_header('Content-Disposition',f'attachment; filename=cheena_kachroo_resume.pdf')
                 message.attach(part)
                 pos = v["position"].upper()
-                message["Subject"] = f"Cheena Kachroo - {pos}"
-                body = f"""Hello {v["name"]},\n\nI trust this message finds you well.\n\nI am writing to express my keen interest in the {pos} position at your esteemed company.\n\n JOB LINK: {k}.\n\nCurrently, I am a dedicated Data Scientist at Spry, a US healthcare product-based startup, where I serve as a core team member. Our focus at Spry revolves around enhancing movement health through the implementation of computer vision models. In addition to contributing significantly to this initiative, I have also collaborated with the largest US healthcare chain. My role involves the development and deployment of various models aligned with user performance and precision, leveraging the serverless framework for efficient deployment.\n\nPrior to my current role, I gained valuable experience as a Data Science Intern at Google (via Smollan). In this capacity, I was responsible for data collection, management, and analysis. This experience provided me with the skills to handle, analyze, and develop insights from large datasets.\n\nFor your convenience, I have attached my resume to this email.\n\nI am enthusiastic about the prospect of contributing my skills and expertise to your team and am eager to discuss how my background aligns with the requirements of the Data Scientist position. I look forward to the opportunity to speak with you further.\n\n\nThank you for considering my application.\n\n\n\nWarm regards,\nCheena Kachroo"""
+                message["Subject"] = f"Akhilesh Pratap Shahi - {pos}"
+                #Edit body before sending using the script
+                body = f"""Hello {v["name"]},\n\nI trust this message finds you well.\n\nI am writing to express my keen interest in the {pos} position at your esteemed company.\n\n JOB LINK: {k}.\n\n ***** (INSERT YOUR CONTENT)\n\nFor your convenience, I have attached my resume to this email.\n\nI am enthusiastic about the prospect of contributing my skills and expertise to your team and am eager to discuss how my background aligns with the requirements of the {pos} position. I look forward to the opportunity to speak with you further.\n\n\nThank you for considering my application.\n\n\n\nWarm regards,\nYOUR NAME"""
                 message.attach(MIMEText(body,'plain'))
                 message["To"]= v["mail"]
                 recepient = v["mail"]
